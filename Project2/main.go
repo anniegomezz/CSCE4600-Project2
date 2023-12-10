@@ -85,7 +85,7 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 	case "pwd": //pwd command -- built-in command 3
 		return builtins.PwdComm(args...)
 	case "times": //times command -- built-in command 4
-		return builtins.TimesComm()
+		return builtins.TimesComm() //takes in no arguments
 	case "ls": //ls command -- built-in command 5
 		return builtins.LsComm(args...) //customized it a bit
 	case "exit":
