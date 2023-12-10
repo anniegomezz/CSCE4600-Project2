@@ -78,7 +78,7 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 		return builtins.ChangeDirectory(args...)
 	case "env":
 		return builtins.EnvironmentVariables(w, args...)
-	case "echo": //echostring command -- built-in command 1
+	case "echo": //echo command -- built-in command 1
 		return builtins.EchoString(args...)
 	case "eval": //eval command - built-in command 2
 		return builtins.EvalComm(args...)
@@ -86,6 +86,8 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 		return builtins.PwdComm(args...)
 	case "times": //times command -- built-in command 4
 		return builtins.TimesComm()
+	case "ls": //ls command -- built-in command 5
+		return builtins.LsComm(args...) //customized it a bit
 	case "exit":
 		exit <- struct{}{}
 		return nil
