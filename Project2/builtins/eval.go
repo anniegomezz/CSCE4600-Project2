@@ -10,7 +10,7 @@ import (
 
 // prints error message for wrong number of arguments given, need at least one
 var (
-	ArgCounter = errors.New("invalid argument count")
+	ArgCounter = errors.New("Wrong argument count.")
 )
 
 func EvalComm(args ...string) error {

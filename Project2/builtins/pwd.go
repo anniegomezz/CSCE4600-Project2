@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	ErrInvalidArgCounter = errors.New("invalid argument count")
+	ErrInvalidArgCounter = errors.New("Not enough arguments.")
 )
 
 func PwdComm(args ...string) error {
